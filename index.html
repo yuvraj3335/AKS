@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dearest Love - A Fourth Wing Inspired Love Letter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;1,400&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <i class="fas fa-dragon dragon-corner top-right-dragon"></i>
+            <div class="hero-content">
+                <h1 class="main-title">For My Cutuu  Akansha Aka Aaloo</h1>
+                <p class="love-message">My heart soars like a dragon when I'm with you. You're my greatest adventure and my forever home.</p>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="gallery-section">
+            <h2>Akansha's Photos</h2>
+            <div class="gallery" id="photoGallery">
+                <!-- Photos will be loaded from the photos folder via JavaScript -->
+            </div>
+            <div class="fire-divider"></div>
+        </section>
+
+        <!-- Aaloos Worries Section -->
+        <section class="complaints-section">
+            <i class="fas fa-dragon dragon-corner top-right-dragon"></i>
+            <h2>Aaloos Worries</h2>
+            
+            <!-- Complaint Form (visible to all users) -->
+            <div class="complaint-subtitle">Submit your complaints, my lady</div>
+            
+            <div class="complaint-form">
+                <div class="form-group">
+                    <label for="complaint">What troubles you, my flame?</label>
+                    <textarea id="complaint" placeholder="Tell me what's bothering you..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>How angry are you?</label>
+                    <div class="rating-container">
+                        <div class="rating">
+                            <input type="radio" id="anger1" name="anger-rating" value="1">
+                            <label for="anger1"><i class="fas fa-fire"></i></label>
+                            
+                            <input type="radio" id="anger2" name="anger-rating" value="2">
+                            <label for="anger2"><i class="fas fa-fire"></i></label>
+                            
+                            <input type="radio" id="anger3" name="anger-rating" value="3">
+                            <label for="anger3"><i class="fas fa-fire"></i></label>
+                            
+                            <input type="radio" id="anger4" name="anger-rating" value="4">
+                            <label for="anger4"><i class="fas fa-fire"></i></label>
+                            
+                            <input type="radio" id="anger5" name="anger-rating" value="5">
+                            <label for="anger5"><i class="fas fa-fire"></i></label>
+                        </div>
+                        <div class="rating-labels">
+                            <span>Mild</span>
+                            <span>Fuming</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reason">Why does this trouble you?</label>
+                    <textarea id="reason" placeholder="Share the reason for your displeasure..."></textarea>
+                </div>
+                
+                <button id="submitComplaint" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Generate Complaints
+                </button>
+            </div>
+            
+            <!-- View Tickets Section (requires login) -->
+            <div class="view-tickets-section">
+                <div class="view-tickets-title">Want to see Aaloos's complaints?</div>
+                
+                <!-- Login Form -->
+                <div id="loginContainer" class="login-container">
+                    <div class="login-form">
+                        <h3>Please Login to View Aaloos's Complaints</h3>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter password">
+                        </div>
+                        <button id="loginBtn" class="login-btn">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Tickets List (hidden until authenticated) -->
+                <div id="ticketsContainer" class="tickets-container" style="display: none;">
+                    <h3>Your Complaint Tickets</h3>
+                    <div id="ticketsList" class="tickets-list">
+                        <!-- Tickets will be loaded here via JavaScript -->
+                    </div>
+                    
+                    <button id="logoutBtn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+            
+            <div class="fire-divider"></div>
+        </section>
+
+        <!-- Dynamic Chatbot -->
+        <section class="chatbot-section">
+            <i class="fas fa-dragon dragon-corner bottom-left-dragon"></i>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <i class="fas fa-comment chat-icon"></i>
+                    <h2>Chat with Yuvraj</h2>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message violet-message">
+                        <p>Hellooo Akansha ❤️</p>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Type a message...">
+                    <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <button id="startOverBtn" class="start-over-btn">Start Over</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
