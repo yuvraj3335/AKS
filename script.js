@@ -235,7 +235,7 @@ function generateSimpleResponse(userMessage) {
     } else if (lowerCaseMessage.includes('together')) {
         return "When we're together, I feel complete. Like all the scattered pieces of my heart finally found their place. There's a peace in your presence that I've never found anywhere else. You're my calm in every storm. 💭";
     } else {
-        return "I cherish every moment with you, every conversation, every shared smile. What other thoughts would you like to share with me today, my love?";
+        return "Yaha Kya kar rahi hai , Usse jaake baat kar";
     }
 }
 
